@@ -1,3 +1,4 @@
+# 6.2 容器（Container）
 add_executable(vector1 vector1.cpp)
 add_executable(deque1 deque1.cpp)
 add_executable(array1 array1.cpp)
@@ -9,3 +10,8 @@ add_executable(multimap1 multimap1.cpp)
 add_executable(unordmultiset1 unordmultiset1.cpp)
 add_executable(unordmap1 unordmap1.cpp)
 add_executable(assoarray1 assoarray1.cpp)
+
+# 6.3 迭代器（Iterator）
+add_executable(list1old list1old.cpp)
+add_executable(set1 set1.cpp)
+add_executable(unordmultiset2 unordmultiset2.cpp)
