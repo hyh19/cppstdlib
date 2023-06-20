@@ -12,22 +12,26 @@
 #include <deque>
 #include <string>
 #include <iostream>
+
 using namespace std;
 
 
 /* class Person
  */
 class Person {
-  private:
+private:
     string fn;    // first name
     string ln;    // last name
-  public:
+public:
     Person() {
     }
-    Person(const string& f, const string& n)
-     : fn(f), ln(n) {
+
+    Person(const string &f, const string &n)
+            : fn(f), ln(n) {
     }
+
     string firstname() const;
+
     string lastname() const;
     // ...
 };
@@ -40,8 +44,7 @@ inline string Person::lastname() const {
     return ln;
 }
 
-ostream& operator<< (ostream& s, const Person& p)
-{
+ostream &operator<<(ostream &s, const Person &p) {
     s << "[" << p.firstname() << " " << p.lastname() << "]";
     return s;
 }
@@ -50,28 +53,26 @@ ostream& operator<< (ostream& s, const Person& p)
 /* binary function predicate:
  * - returns whether a person is less than another person
  */
-bool personSortCriterion (const Person& p1, const Person& p2)
-{
+bool personSortCriterion(const Person &p1, const Person &p2) {
     /* a person is less than another person
      * - if the last name is less
      * - if the last name is equal and the first name is less
      */
-    return p1.lastname()<p2.lastname() ||
-           (p1.lastname()==p2.lastname() &&
-            p1.firstname()<p2.firstname());
+    return p1.lastname() < p2.lastname() ||
+           (p1.lastname() == p2.lastname() &&
+            p1.firstname() < p2.firstname());
 }
 
-int main()
-{
+int main() {
     // create some persons
-    Person p1("nicolai","josuttis");
-    Person p2("ulli","josuttis");
-    Person p3("anica","josuttis");
-    Person p4("lucas","josuttis");
-    Person p5("lucas","otto");
-    Person p6("lucas","arm");
-    Person p7("anica","holle");
-    
+    Person p1("nicolai", "josuttis");
+    Person p2("ulli", "josuttis");
+    Person p3("anica", "josuttis");
+    Person p4("lucas", "josuttis");
+    Person p5("lucas", "otto");
+    Person p6("lucas", "arm");
+    Person p7("anica", "holle");
+
     // insert person into collection coll
     deque<Person> coll;
     coll.push_back(p1);
@@ -90,7 +91,7 @@ int main()
     }
 
     // sort elements
-    sort(coll.begin(),coll.end(),    // range
+    sort(coll.begin(), coll.end(),    // range
          personSortCriterion);       // sort criterion
 
     // print elements

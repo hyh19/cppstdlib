@@ -9,17 +9,16 @@
  * warranty, and with no claim as to its suitability for any purpose.
  */
 #include <array>
-#include <string>
 #include <iostream>
+
 using namespace std;
 
-int main()
-{
+int main() {
     // array container of 5 string elements:
-    array<string,5> coll = { "hello", "world" };
+    array<string, 5> coll = {"hello", "world"};
 
     // print each element with its index on a line
-    for (int i=0; i<coll.size(); ++i) {
+    for (int i = 0; i < coll.size(); ++i) {
         cout << i << ": " << coll[i] << endl;
     }
 }

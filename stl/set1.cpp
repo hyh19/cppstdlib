@@ -11,8 +11,7 @@
 #include <set>
 #include <iostream>
 
-int main()
-{
+int main() {
     // type of the collection
     typedef std::set<int> IntSet;
 
