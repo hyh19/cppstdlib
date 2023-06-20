@@ -12,7 +12,6 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
-#include <iostream>
 #include "print.hpp"
 
 int square(int value) {

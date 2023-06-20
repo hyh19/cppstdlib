@@ -10,8 +10,6 @@
  */
 #include <deque>
 #include <algorithm>
-#include <functional>
-#include <iostream>
 #include "print.hpp"
 
 using namespace std;

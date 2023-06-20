@@ -10,7 +10,6 @@
  */
 #include <list>
 #include <algorithm>
-#include <iostream>
 #include "print.hpp"
 
 using namespace std;
@@ -21,7 +20,7 @@ private:
     int theValue;    // the value to add
 public:
     // constructor initializes the value to add
-    AddValue(int v) : theValue(v) {
+    explicit AddValue(int v) : theValue(v) {
     }
 
     // the "function call" for the element adds the value

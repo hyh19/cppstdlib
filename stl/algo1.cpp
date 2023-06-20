@@ -36,7 +36,7 @@ int main() {
     reverse(pos3, coll.end());
 
     // print all elements
-    for (auto elem: coll) {
+    for (const auto &elem: coll) {
         cout << elem << ' ';
     }
     cout << endl;
