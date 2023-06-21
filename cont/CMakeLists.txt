@@ -15,3 +15,10 @@ add_executable(cont_setrange1 setrange1.cpp)
 add_executable(cont_set1 set1.cpp)
 add_executable(cont_multiset1 multiset1.cpp)
 add_executable(cont_setcmp1 setcmp1.cpp)
+
+# 7.8 Map 和 Multimap
+add_executable(cont_map1 map1.cpp)
+add_executable(cont_map2 map2.cpp)
+add_executable(cont_multimap1 multimap1.cpp)
+add_executable(cont_mapfind1 mapfind1.cpp)
+add_executable(cont_mapcmp1 mapcmp1.cpp)

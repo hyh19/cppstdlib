@@ -37,7 +37,7 @@ private:
 
 public:
     // constructor: initializes the comparison criterion
-    RuntimeStringCmp(cmp_mode m = normal) : mode(m) {
+    explicit RuntimeStringCmp(cmp_mode m = normal) : mode(m) {
     }
 
     // the comparison
