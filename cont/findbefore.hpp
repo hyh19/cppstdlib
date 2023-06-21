@@ -8,32 +8,30 @@
  * This software is provided "as is" without express or implied
  * warranty, and with no claim as to its suitability for any purpose.
  */
-template <typename InputIterator, typename Tp>
+template<typename InputIterator, typename Tp>
 inline InputIterator
-find_before (InputIterator first, InputIterator last, const Tp& val)
-{
-    if (first==last) {
+find_before(InputIterator first, InputIterator last, const Tp &val) {
+    if (first == last) {
         return first;
     }
     InputIterator next(first);
     ++next;
-    while (next!=last && !(*next==val)) {
+    while (next != last && !(*next == val)) {
         ++next;
         ++first;
     }
     return first;
 }
 
-template <typename InputIterator, typename Pred>
+template<typename InputIterator, typename Pred>
 inline InputIterator
-find_before_if (InputIterator first, InputIterator last, Pred pred)
-{
-    if (first==last) {
+find_before_if(InputIterator first, InputIterator last, Pred pred) {
+    if (first == last) {
         return first;
     }
     InputIterator next(first);
     ++next;
-    while (next!=last && !pred(*next)) {
+    while (next != last && !pred(*next)) {
         ++next;
         ++first;
     }

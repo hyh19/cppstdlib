@@ -12,14 +12,14 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+
 using namespace std;
 
-int main()
-{
+int main() {
     // create map / associative array
     // - keys are strings
     // - values are floats
-    typedef map<string,float> StringFloatMap;
+    typedef map<string, float> StringFloatMap;
 
     StringFloatMap stocks;      // create empty container
 

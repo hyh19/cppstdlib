@@ -9,12 +9,11 @@
  * warranty, and with no claim as to its suitability for any purpose.
  */
 namespace MyLib {
-    template <typename Cont>
+    template<typename Cont>
     inline
-    bool replace_key (Cont& c,
-                      const typename Cont::key_type& old_key,
-                      const typename Cont::key_type& new_key)
-    {
+    bool replace_key(Cont &c,
+                     const typename Cont::key_type &old_key,
+                     const typename Cont::key_type &new_key) {
         typename Cont::iterator pos;
         pos = c.find(old_key);
         if (pos != c.end()) {
@@ -24,8 +23,7 @@ namespace MyLib {
             // remove old element
             c.erase(pos);
             return true;
-        }
-        else {
+        } else {
             // key not found
             return false;
         }

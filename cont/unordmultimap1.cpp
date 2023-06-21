@@ -13,25 +13,25 @@
 #include <iostream>
 #include <utility>
 #include "buckets.hpp"
+
 using namespace std;
 
-int main()
-{
+int main() {
     // create and initialize an unordered multimap as dictionary
-    std::unordered_multimap<string,string> dict = {
-                  {"day","Tag"},
-                  {"strange","fremd"},
-                  {"car","Auto"},
-                  {"smart","elegant"},
-                  {"trait","Merkmal"},
-                  {"strange","seltsam"}
+    std::unordered_multimap<string, string> dict = {
+            {"day",     "Tag"},
+            {"strange", "fremd"},
+            {"car",     "Auto"},
+            {"smart",   "elegant"},
+            {"trait",   "Merkmal"},
+            {"strange", "seltsam"}
     };
     printHashTableState(dict);
 
     // insert some additional values (might cause rehashing)
-    dict.insert({{"smart","raffiniert"},
-                 {"smart","klug"},
-                 {"clever","raffiniert"}
+    dict.insert({{"smart",  "raffiniert"},
+                 {"smart",  "klug"},
+                 {"clever", "raffiniert"}
                 });
     printHashTableState(dict);
 

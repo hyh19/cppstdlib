@@ -4,3 +4,4 @@ project(cppstdlib)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(stl)
+add_subdirectory(cont)
