@@ -11,7 +11,6 @@
 #include <iostream>
 #include <deque>
 #include <string>
-#include <algorithm>
 #include <iterator>
 
 using namespace std;

@@ -25,7 +25,7 @@ private:
 public:
     // constructor for sorting criterion
     // - default criterion uses value normal
-    RuntimeCmp(cmp_mode m = normal) : mode(m) {
+    explicit RuntimeCmp(cmp_mode m = normal) : mode(m) {
     }
 
     // comparison of elements
