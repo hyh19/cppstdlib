@@ -9,8 +9,6 @@
  * warranty, and with no claim as to its suitability for any purpose.
  */
 #include <unordered_map>
-#include <string>
-#include <iostream>
 #include <utility>
 #include "buckets.hpp"
 

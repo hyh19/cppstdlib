@@ -8,7 +8,6 @@
  * This software is provided "as is" without express or implied
  * warranty, and with no claim as to its suitability for any purpose.
  */
-#include <string>
 #include <iostream>
 #include <unordered_set>
 #include "hashval.hpp"

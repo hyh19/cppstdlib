@@ -9,7 +9,6 @@
  * warranty, and with no claim as to its suitability for any purpose.
  */
 #include <unordered_set>
-#include <string>
 #include <iostream>
 #include "hashval.hpp"
 #include "print.hpp"
@@ -55,5 +54,4 @@ int main() {
 
     custset.insert(Customer("nico", "josuttis", 42));
     PRINT_ELEMENTS(custset);
-
 }
