@@ -11,15 +11,13 @@
 #include<functional>
 #include<iostream>
 
-std::function<int(int,int)> returnLambda ()
-{
-    return [] (int x, int y) {
-               return x*y;
-           };
+std::function<int(int, int)> returnLambda() {
+    return [](int x, int y) {
+        return x * y;
+    };
 }
 
-int main()
-{
+int main() {
     auto lf = returnLambda();
-    std::cout << lf(6,7) << std::endl;
+    std::cout << lf(6, 7) << std::endl;
 }

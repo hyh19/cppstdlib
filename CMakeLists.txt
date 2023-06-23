@@ -3,6 +3,8 @@ project(cppstdlib)
 
 set(CMAKE_CXX_STANDARD 14)
 
+# 3 语言新特性
+add_subdirectory(lang)
 add_subdirectory(stl)
 add_subdirectory(cont)
 # 9 STL 迭代器
