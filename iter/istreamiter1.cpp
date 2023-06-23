@@ -10,10 +10,10 @@
  */
 #include <iostream>
 #include <iterator>
+
 using namespace std;
 
-int main()
-{
+int main() {
     // create istream iterator that reads integers from cin
     istream_iterator<int> intReader(cin);
 

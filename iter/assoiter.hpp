@@ -11,44 +11,43 @@
 #include <iterator>
 
 // class template for insert iterator for associative and unordered containers
-template <typename Container>
+template<typename Container>
 class asso_insert_iterator
- : public std::iterator <std::output_iterator_tag,
-                         typename Container::value_type>
-{
-  protected:
-    Container& container;    // container in which elements are inserted
+        : public std::iterator<std::output_iterator_tag,
+                typename Container::value_type> {
+protected:
+    Container &container;    // container in which elements are inserted
 
-  public:
+public:
     // constructor
-    explicit asso_insert_iterator (Container& c) : container(c) {
+    explicit asso_insert_iterator(Container &c) : container(c) {
     }
 
     // assignment operator
     // - inserts a value into the container
-    asso_insert_iterator<Container>&
-    operator= (const typename Container::value_type& value) { 
+    asso_insert_iterator<Container> &
+    operator=(const typename Container::value_type &value) {
         container.insert(value);
         return *this;
     }
 
     // dereferencing is a no-op that returns the iterator itself
-    asso_insert_iterator<Container>& operator* () {
+    asso_insert_iterator<Container> &operator*() {
         return *this;
     }
 
     // increment operation is a no-op that returns the iterator itself
-    asso_insert_iterator<Container>& operator++ () {
+    asso_insert_iterator<Container> &operator++() {
         return *this;
     }
-    asso_insert_iterator<Container>& operator++ (int) {
+
+    asso_insert_iterator<Container> &operator++(int) {
         return *this;
     }
 };
 
 // convenience function to create the inserter
-template <typename Container>
-inline asso_insert_iterator<Container> asso_inserter (Container& c)
-{
+template<typename Container>
+inline asso_insert_iterator<Container> asso_inserter(Container &c) {
     return asso_insert_iterator<Container>(c);
 }

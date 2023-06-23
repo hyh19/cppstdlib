@@ -12,10 +12,10 @@
 #include <algorithm>
 #include <iterator>
 #include "print.hpp"
+
 using namespace std;
 
-int main()
-{
+int main() {
     vector<int> coll;
 
     // create back inserter for coll
@@ -38,8 +38,8 @@ int main()
 
     // use back inserter to append all elements again
     // - reserve enough memory to avoid reallocation
-    coll.reserve(2*coll.size());
-    copy (coll.begin(), coll.end(),    // source
-          back_inserter(coll));        // destination
+    coll.reserve(2 * coll.size());
+    copy(coll.begin(), coll.end(),    // source
+         back_inserter(coll));        // destination
     PRINT_ELEMENTS(coll);
 }

@@ -12,10 +12,10 @@
 #include <algorithm>
 #include <iterator>
 #include "print.hpp"
+
 using namespace std;
 
-int main()
-{
+int main() {
     list<int> coll;
 
     // create front inserter for coll
@@ -39,8 +39,8 @@ int main()
     PRINT_ELEMENTS(coll);
 
     // use front inserter to insert all elements again
-    copy (coll.begin(), coll.end(),    // source
-          front_inserter(coll));       // destination
+    copy(coll.begin(), coll.end(),    // source
+         front_inserter(coll));       // destination
 
     PRINT_ELEMENTS(coll);
 }

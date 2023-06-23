@@ -15,9 +15,8 @@
 #include "print.hpp"
 #include "assoiter.hpp"
 
-int main()
-{
-    std::unordered_set<int> coll;   
+int main() {
+    std::unordered_set<int> coll;
 
     // create inserter for coll
     // - inconvenient way
@@ -40,9 +39,9 @@ int main()
     PRINT_ELEMENTS(coll);
 
     // use inserter with an algorithm
-    std::vector<int> vals = { 33, 67, -4, 13, 5, 2 };
-    std::copy (vals.begin(), vals.end(),    // source
-               asso_inserter(coll));        // destination
+    std::vector<int> vals = {33, 67, -4, 13, 5, 2};
+    std::copy(vals.begin(), vals.end(),    // source
+              asso_inserter(coll));        // destination
 
     PRINT_ELEMENTS(coll);
 }
