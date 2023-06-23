@@ -7,3 +7,5 @@ add_subdirectory(stl)
 add_subdirectory(cont)
 # 9 STL 迭代器
 add_subdirectory(iter)
+# 10 STL 函数对象及 Lambda
+add_subdirectory(fo)

@@ -11,8 +11,7 @@
 #include <functional>
 #include <iostream>
 
-int main()
-{
+int main() {
     auto plus10 = std::bind(std::plus<int>(),
                             std::placeholders::_1,
                             10);
@@ -35,5 +34,5 @@ int main()
     auto inversDivide = std::bind(std::divides<double>(),
                                   std::placeholders::_2,
                                   std::placeholders::_1);
-    std::cout << "invdiv: " << inversDivide(49,7) << std::endl;
+    std::cout << "invdiv: " << inversDivide(49, 7) << std::endl;
 }
