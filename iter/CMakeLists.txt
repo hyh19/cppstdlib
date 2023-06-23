@@ -16,3 +16,8 @@ add_executable(iter_reviter4 reviter4.cpp)
 add_executable(iter_backinserter1 backinserter1.cpp)
 add_executable(iter_frontinserter1 frontinserter1.cpp)
 add_executable(iter_inserter1 inserter1.cpp)
+
+# 9.4.3 Stream（串流）迭代器
+add_executable(iter_ostreamiter1 ostreamiter1.cpp)
+add_executable(iter_istreamiter1 istreamiter1.cpp)
+add_executable(iter_advance2 advance2.cpp)
