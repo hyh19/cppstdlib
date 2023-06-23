@@ -8,44 +8,45 @@
  * This software is provided "as is" without express or implied
  * warranty, and with no claim as to its suitability for any purpose.
  */
-#include <functional>
 #include <algorithm>
+#include <utility>
 #include <vector>
 #include <iostream>
-#include <string>
+
 using namespace std;
 using namespace std::placeholders;
 
 class Person {
-  private:
+private:
     string name;
-  public:
-    Person (const string& n) : name(n) {
+public:
+    explicit Person(string n) : name(std::move(n)) {
     }
-    void print () const {
+
+    void print() const {
         cout << name << endl;
     }
-    void print2 (const string& prefix) const {
+
+    void print2(const string &prefix) const {
         cout << prefix << name << endl;
     }
     //...
 };
 
-int main()
-{
+int main() {
     vector<Person> coll
-            = { Person("Tick"), Person("Trick"), Person("Track") };
+            = {Person("Tick"), Person("Trick"), Person("Track")};
 
     // call member function print() for each person
-    for_each (coll.begin(), coll.end(),
-              [] (const Person& p) {
-                  p.print();
-              });
+    for_each(coll.begin(), coll.end(),
+             [](const Person &p) {
+                 p.print();
+             });
     cout << endl;
 
     // call member function print2() with additional argument for each person
-    for_each (coll.begin(), coll.end(),
-              [] (const Person& p) {
-                  p.print2("Person: ");
-              });
+    for_each(coll.begin(), coll.end(),
+             [](const Person &p) {
+                 p.print2("Person: ");
+             });
 }
