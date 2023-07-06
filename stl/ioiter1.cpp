@@ -18,6 +18,8 @@ using namespace std;
 int main() {
     vector<string> coll;
 
+    // 在 Debug 模式下运行，按组合键 Cmd + D 结束输入。
+
     // read all words from the standard input
     // - source: all strings until end-of-file (or error)
     // - destination: coll (inserting)
