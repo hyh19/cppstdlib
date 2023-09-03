@@ -22,13 +22,13 @@ int main() {
     // negate all values in coll
     transform(coll.cbegin(), coll.cend(),      // source
               coll.begin(),                   // destination
-              negate<int>());                 // operation
+              negate<>());                 // operation
     PRINT_ELEMENTS(coll, "negated:     ");
 
     // square all values in coll
     transform(coll.cbegin(), coll.cend(),      // first source
               coll.cbegin(),                  // second source
               coll.begin(),                   // destination
-              multiplies<int>());             // operation
+              multiplies<>());             // operation
     PRINT_ELEMENTS(coll, "squared:     ");
 }
