@@ -12,6 +12,7 @@
 #include <deque>
 #include <string>
 #include <iostream>
+#include <utility>
 
 using namespace std;
 
@@ -23,11 +24,10 @@ private:
     string fn;    // first name
     string ln;    // last name
 public:
-    Person() {
-    }
+    Person() = default;
 
-    Person(const string &f, const string &n)
-            : fn(f), ln(n) {
+    Person(string f, string n)
+            : fn(std::move(f)), ln(std::move(n)) {
     }
 
     string firstname() const;
