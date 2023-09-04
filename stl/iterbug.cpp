@@ -19,7 +19,7 @@ int main() {
 
     // RUNTIME ERROR:
     // - beginning is behind the end of the range
-    vector<int>::iterator pos = coll1.begin();
+    auto pos = coll1.begin();
     reverse(++pos, coll1.end());
 
     // insert elements from 1 to 9 into coll1
