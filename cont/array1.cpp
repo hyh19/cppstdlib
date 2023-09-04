@@ -34,7 +34,7 @@ int main() {
     // negate all elements
     transform(a.begin(), a.end(),    // source
               a.begin(),            // destination
-              negate<int>());       // operation
+              negate<>());       // operation
     PRINT_ELEMENTS(a);
 }
 

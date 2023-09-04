@@ -24,7 +24,7 @@ int main() {
     sentence.reserve(5);
 
     // append some elements
-    sentence.push_back("Hello,");
+    sentence.emplace_back("Hello,");
     sentence.insert(sentence.end(), {"how", "are", "you", "?"});
 
     // print elements separated with spaces

@@ -21,7 +21,7 @@ int main() {
 
     // insert several elements
     coll.assign(3, string("string"));
-    coll.push_back("last string");
+    coll.emplace_back("last string");
     coll.push_front("first string");
 
     // print elements separated by newlines
